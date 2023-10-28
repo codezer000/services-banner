@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple banner</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    background-color: rgb(255, 217, 93);
+}
+#header-top{
+    width: 100%;
+    background-color: white;
+    padding: 0.2rem;
+}
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+.top-nav #logo-txt{
+    font-family: 'Franklin Gothic Medium';
+}
+.top-nav ul{
+    display: flex;
+}
+.top-nav ul li{
+    margin-left: 20px;
+}
+.top-nav ul li a{
+    font-size: 1.2rem; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    color: black;
+    font-weight: 500;
+}
+.three-dot{
+    width: 1.5rem;
+    display: none;
+}
+.top-nav ul li::after{
+    content: "";
+    position: relative;
+    background-color: rgb(255, 201, 22);
+    width: 100%;
+    height: 3px;
+    transform-origin: left;
+    margin-top: 0.1rem;
+    display: block;
+    transform: scaleX(0);
+    transition: all ease-in-out 200ms;
+}
+.top-nav ul li:hover:after{
+    transform: scaleX(1);
+}
+.section1{
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.section1 .sec-1-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+}
+.sec-1-head h1{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+.sec-1-head p{
+    font-size: 1rem;
+    text-align: center;
+}
+.box-img{
+    width: 3rem;
+}
+.section2{
+
+}
+.sec-2-row-1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* padding: 200px; */
+    padding-top: 20px;
+}
+.section2 .sec-2-row-1 .box1{
+    background-color: white;
+    padding: 10px;
+    /* border-radius: 10px; */
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30%;
+    margin: 10px;
+    overflow: hidden;
+    max-width: 500px;
+    min-height: 200px;
+    justify-content:space-evenly;
+    align-items: center;
+
+
+}
+.section2 .sec-2-row-1 .box1 h1{
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    text-align: center;
+}
+.section2 .sec-2-row-1 .box1 p{
+    font-family: Tahoma;
+    font-size: .9rem;
+    margin-top: 10px;
+    text-align: justify;
+    max-width: 200px;
+}
+.section2 .sec-2-row-1 .box1 .box-cont{
+    padding: 10px;
+}
+.section2 .sec-2-row-1 .box1 .box-logo{
+    display: flex;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width:680px) {
+    html{
+        font-size: 14px;
+    }
+    .section2 .sec-2-row-1 .box1{
+        min-height: 100px;
+    }
+    .three-dot{
+        display: block;
+    }
+    .top-nav ul{
+        display: none;
+}
+@media screen and (max-width:450px) {
+    html{
+        font-size: 12px;
+    }
+    .sec-2-row-1{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:355px) {
+    html{
+        font-size: 10px;
+    }
+    .sec-2-row-1{
+        flex-direction: column;
+    }
+}
+}
+</style>
+</head>
+<body>
+    <header id="header-top">
+        <nav class="top-nav">
+            <h1 id="logo-txt">JIN0</h1>
+            <ul>
+                <li><a target="_blank" href="">Contacts</a></li>
+                <li><a target="_blank" href="">services</a></li>
+                <li><a target="_blank" href="">resources</a></li>
+                <li><a target="_blank" href="">Booking</a></li>
+                <li><a target="_blank" href="">login/signup</a></li>
+            </ul>
+            <img src="three-dots.svg" class="three-dot" alt="">
+        </nav>
+    </header>
+    <section class="section1">
+        <div class="sec-1-head">
+            <h1>Our Services</h1>
+            <p>Wide range of services are availabe , Please select the service you are looking for</p>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="sec-2-row-1">
+            <div class="box1">
+                <div class="box-logo">
+                    <img class="box-img" src="quality.svg" alt="">
+                </div>
+                <div class="box-cont">
+                    <h1>HIGH QUALITY</h1>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error qui molestiae necessitatibus ipsam animi possimus ratione aspernatur voluptas.</P>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box-logo">
+                    <img class="box-img" src="marketing.svg" alt="">
+                </div>
+                <div class="box-cont">
+                    <h1>MARKETING</h1>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error qui molestiae necessitatibus ipsam animi possimus ratione aspernatur voluptas.</P>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box-logo">
+                    <img class="box-img" src="security.svg" alt="">
+                </div>
+                <div class="box-cont">
+                    <h1>SECURITY</h1>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error qui molestiae necessitatibus ipsam animi possimus ratione aspernatur voluptas.</P>
+                </div>
+            </div>
+            <div class="box1">
+            
+                <div class="box-logo">
+                    <img class="box-img" src="development.svg" alt="">
+                </div>
+                <div class="box-cont">
+                    <h1>DEVELOPMENT</h1>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error qui molestiae necessitatibus ipsam animi possimus ratione aspernatur voluptas.</P>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box-logo">
+                    <img class="box-img" src="team.svg" alt="">
+                </div>
+                <div class="box-cont">
+                    <h1>BEST TEAM</h1>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error qui molestiae necessitatibus ipsam animi possimus ratione aspernatur voluptas.</P>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box-logo">
+                    <img class="box-img" src="suppoet.svg" alt="">
+                </div>
+                <div class="box-cont">
+                    <h1>GOOD SUPPORT</h1>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error qui molestiae necessitatibus ipsam animi possimus ratione aspernatur voluptas.</P>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
